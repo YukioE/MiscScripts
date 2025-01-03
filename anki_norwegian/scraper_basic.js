@@ -7,8 +7,8 @@
         const cells = row.querySelectorAll('td');
         const norwegianWord = cells[1]?.textContent.trim();
         const englishWord = cells[2]?.textContent.trim();
-        const pronunciationLink = `https://de.forvo.com/word/${encodeURIComponent(norwegianWord)}/#no`;
-        return `${norwegianWord};${englishWord};<a href="${pronunciationLink}">Pronunciation</a>`;
+        const pronunciationLink = `<a href="https://de.forvo.com/word/${encodeURIComponent(norwegianWord)}/#no">Pronunciation</a>`;
+        return `${englishWord};${norwegianWord}<br>${pronunciationLink}`;
     });
 
     // Combine into a single string
